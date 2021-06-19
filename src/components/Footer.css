@@ -1,0 +1,21 @@
+.footer {
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.footer-text {
+  padding-bottom: 5px;
+  text-align: center;
+  margin: 0;
+  color: white;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.footer-link:hover {
+  opacity: 0.6;
+}

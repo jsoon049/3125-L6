@@ -1,0 +1,50 @@
+.booking-form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 1.05em;
+}
+
+.booking-inner {
+  margin-bottom: 20px;
+  margin-right: 15px;
+  width: 100%;
+}
+
+.booking-input {
+  font-size: 1em;
+  padding: 5px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.booking-form-wrapper {
+  margin: 0 10px;
+}
+
+.services-drop {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.last {
+  margin-right: 0;
+}
+
+.date-time {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  min-height: 1em;
+}
+
+@media screen and (min-width: 535px) {
+  .booking-outer {
+    display: flex;
+    justify-content: space-between;
+  }
+  .booking-inner {
+    width: 50%;
+    display: inline-block;
+  }
+}
+

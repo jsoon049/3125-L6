@@ -1,0 +1,67 @@
+html * {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+.instructions {
+  text-align: center;
+  width: 79%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 10px 15px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.submit {
+  margin-right: 15px;
+}
+
+.required {
+  color: red;
+}
+
+.about-wrapper, .booking-wrapper, .contact-wrapper, .service-wrapper {
+  width: 80%;
+  margin: auto;
+}
+
+.service, .about {
+  background-color: #d2d6e2;
+}
+
+.booking, .contact {
+  background-color: #e4e6ee;
+}
+
+.about, .booking, .contact, .service {
+  padding: 20px 0;
+}
+
+.header, .footer {
+  background-color: #495d89;
+}
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 535px) {
+  html {
+    font-size: 0.85em;
+  }
+}

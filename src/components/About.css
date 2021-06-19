@@ -1,0 +1,57 @@
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.about-ul {
+  border: 1px solid black;
+  padding: 0;
+  margin: 10px;
+}
+
+.about-content {
+  margin: 0 15px;
+  position: relative;
+  text-align: center;
+}
+
+.about-text {
+  font-size: 1em;
+  text-align: left;
+}
+
+.about-name {
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
+  background-color: #415385;
+  color: white;
+  font-weight: 400;
+}
+
+.about-card {
+  position: relative;
+  height: auto;
+}
+
+.about-img {
+  width: 200px;
+  height: 225px;
+  margin-top: 15px;
+}
+
+@media screen and (min-width: 700px) {
+  .about-wrapper {
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+  }
+  .about-text {
+    font-size: 1em;
+    margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about-wrapper {
+    grid-template-columns: 1fr 1fr 1fr; /* 3 columns */
+  }
+}
