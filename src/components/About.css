@@ -40,6 +40,13 @@
   margin-top: 15px;
 }
 
+.about-header {
+  width: 77%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
 @media screen and (min-width: 700px) {
   .about-wrapper {
     grid-template-columns: 1fr 1fr; /* 2 columns */

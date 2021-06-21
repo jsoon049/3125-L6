@@ -39,6 +39,13 @@
   height: 250px;
 }
 
+.service-header {
+  width: 77%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
 @media screen and (min-width: 700px) {
   .service-wrapper {
     grid-template-columns: 1fr 1fr; /* 2 columns */

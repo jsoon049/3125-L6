@@ -14,7 +14,7 @@ h2 {
 
 .instructions {
   text-align: center;
-  width: 79%;
+  width: 97%;
   margin: auto;
   margin-bottom: 20px;
 }
@@ -54,6 +54,13 @@ h2 {
   background-color: #495d89;
 }
 
+.title-icon {
+  padding: 0 10px;
+  font-size: 32px;
+  position: relative;
+  top: 5px;
+}
+
 @media screen and (max-width: 375px) {
   html {
     font-size: 0.8em;
@@ -63,5 +70,10 @@ h2 {
 @media screen and (max-width: 535px) {
   html {
     font-size: 0.85em;
+  }
+  .title-icon {
+    font-size: 28px;
+    position: relative;
+    top: 4px;
   }
 }

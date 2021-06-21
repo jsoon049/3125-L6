@@ -1,11 +1,19 @@
 import React from "react";
 import "./Booking.css";
+import { Payment } from "./Payment.js";
 
 export const Booking = () => {
   return (
     <div className="booking" id="booking">
-      <h1><span>Book an Appointment</span></h1>
       <div className="booking-wrapper">
+        <h1>
+          <span>Book an Appointment</span>
+          <span className="material-icons title-icon">book_online</span>
+        </h1>
+        <p className="instructions">
+          Please fill out both the contact and payment section of the form below to make an appointment. 
+          Click the submit button once you are ready to make your appointment.
+        </p>
         <form className="booking-form-wrapper">
           <div className="booking-outer">
             <div className="booking-inner">
@@ -22,7 +30,7 @@ export const Booking = () => {
                 placeholder="John"
               />
             </div>
-            <div className="booking-inner">
+            <div className="booking-inner last">
               <label className="booking-form-label">
                 Last Name
                 <strong className="required"> *</strong>
@@ -34,20 +42,6 @@ export const Booking = () => {
                 className="booking-input"
                 required
                 placeholder="Doe"
-              />
-            </div>
-            <div className="booking-inner last">
-              <label className="booking-form-label">
-                Age
-                <strong className="required"> *</strong>
-              </label>
-              <input
-                type="text"
-                name="age"
-                size="20"
-                className="booking-input"
-                required
-                placeholder="20"
               />
             </div>
           </div>
@@ -84,6 +78,43 @@ export const Booking = () => {
           <div className="booking-outer">
             <div className="booking-inner">
               <label className="booking-form-label">
+                Service
+                <strong className="required"> *</strong>
+              </label>
+              <select
+                name="booking-service"
+                id="booking-service"
+                className="booking-input"
+              >
+                <option defaultValue></option>
+                <option value="Chiropractics">Chiropractics</option>
+                <option value="MassageTherapy">Massage Therapy</option>
+                <option value="Physiotherapy">Physiotherapy</option>
+                <option value="Acupuncture">Acupuncture</option>
+                <option value="CustomKneeBracing">Custom Knee Bracing</option>
+                <option value="CustomOrthotics">Custom Orthotics</option>
+              </select>
+            </div>
+            <div className="booking-inner last">
+              <label className="booking-form-label">
+                Expert
+                <strong className="required"> *</strong>
+              </label>
+              <select
+                name="booking-service"
+                id="booking-service"
+                className="booking-input"
+              >
+                <option defaultValue></option>
+                <option value="kanye">Kanye West</option>
+                <option value="homer">Homer Simpson</option>
+                <option value="chris">Chris Griffin</option>
+              </select>
+            </div>
+          </div>
+          <div className="booking-outer">
+            <div className="booking-inner">
+              <label className="booking-form-label">
                 Date
                 <strong className="required"> *</strong>
               </label>
@@ -98,7 +129,7 @@ export const Booking = () => {
             </div>
             <div className="booking-inner last">
               <label className="booking-form-label">
-               Time
+                Time
                 <strong className="required"> *</strong>
               </label>
               <input
@@ -113,33 +144,17 @@ export const Booking = () => {
           </div>
           <div className="services-drop">
             <label className="booking-form-label">
-              Service
-              <strong className="required"> *</strong>
+              Any Additional Info We Should Know
             </label>
-            <select
-              name="booking-service"
-              id="booking-service"
-              className="booking-input"
-            >
-              <option defaultValue></option>
-              <option value="Chiropractics">Chiropractics</option>
-              <option value="MassageTherapy">Massage Therapy</option>
-              <option value="Physiotherapy">Physiotherapy</option>
-              <option value="Acupuncture">Acupuncture</option>
-              <option value="CustomKneeBracing">Custom Knee Bracing</option>
-              <option value="CustomOrthotics">Custom Orthotics</option>
-            </select>
+            <textarea
+              rows="3"
+              className="contact-input"
+              placeholder="Type here"
+            ></textarea>
           </div>
-          <div className="services-drop">
-            <label className="booking-form-label">Any Additional Info We Should Know</label>
-            <textarea rows="4" cols="25" className="contact-input" placeholder="Type here"></textarea>
-          </div>
+          <Payment />
           <div className="button-wrapper">
-            <input
-              type="submit"
-              value="Submit"
-              className="btn submit"
-            />
+            <input type="submit" value="Submit" className="btn submit" />
             <input type="reset" value="Clear" className="btn" />
           </div>
         </form>

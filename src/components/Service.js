@@ -44,7 +44,10 @@ export const Service = () => {
 
   return (
     <div className="service" id="service">
-      <h1><span>Our Services</span></h1>
+      <h1 className='service-header'>
+        <span>Our Services</span>
+        <span className="material-icons title-icon">spa</span>
+      </h1>
       <div className="service-wrapper">
         {service.map((item, i) => (
           <ul key={i} className="service-ul">

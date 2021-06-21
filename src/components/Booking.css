@@ -37,6 +37,30 @@
   min-height: 1em;
 }
 
+.payment-title {
+  text-align: center;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.confirm-appt {
+  margin-bottom: 10px;
+}
+
+.payment-icon {
+  padding: 0 10px;
+  font-size: 28px;
+  position: relative;
+  top: 5px;
+}
+
+@media screen and (max-width: 535px) {
+  .payment-icon {
+    font-size: 24px;
+    top: 4px;
+  }
+}
+
 @media screen and (min-width: 535px) {
   .booking-outer {
     display: flex;
@@ -47,4 +71,3 @@
     display: inline-block;
   }
 }
-
