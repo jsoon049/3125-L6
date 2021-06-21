@@ -1,7 +1,7 @@
 import React from "react";
 import { About } from "./components/About";
 import { Booking } from "./components/Booking";
-import { Contact } from "./components/Contact";
+import  Contact  from "./components/Contact";
 import { Service } from "./components/Service";
 import { Header } from "./components/Header";
 import { Brand } from "./components/Brand";

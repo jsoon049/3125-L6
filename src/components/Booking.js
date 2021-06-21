@@ -11,8 +11,8 @@ export const Booking = () => {
           <span className="material-icons title-icon">book_online</span>
         </h1>
         <p className="instructions">
-          Please fill out both the contact and payment section of the form below to make an appointment. 
-          Click the submit button once you are ready to make your appointment.
+          Please fill out both the contact and payment section below to make an appointment. 
+          Click the submit button once you are ready to book your appointment.
         </p>
         <form className="booking-form-wrapper">
           <div className="booking-outer">

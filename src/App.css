@@ -61,6 +61,13 @@ h2 {
   top: 5px;
 }
 
+.error {
+  color: red;
+  margin-top: 2px;
+  display: block;
+  margin-left: 2px;
+}
+
 @media screen and (max-width: 375px) {
   html {
     font-size: 0.8em;
