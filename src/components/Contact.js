@@ -13,7 +13,7 @@ class Contact extends Component {
         fullName: "",
         email: "",
         phone: "",
-        question:"",
+        question: "",
       },
     };
   }
@@ -24,25 +24,34 @@ class Contact extends Component {
     switch (name) {
       case "fullName":
         let validNameRegex = RegExp(/^[a-z][a-z\s]*$/);
-        if(value === '') errors.fullName = "Field cannot be empty";
-        else errors.fullName = validNameRegex.test(value.toLowerCase()) ? "" : "Name can only contain letters and spaces";
+        if (value === "") errors.fullName = "Field cannot be empty";
+        else
+          errors.fullName = validNameRegex.test(value.toLowerCase())
+            ? ""
+            : "Name can only contain letters and spaces";
         break;
       case "email":
         let validEmailRegex = RegExp(
           /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/ // eslint-disable-line
-        ); 
-        if(value === '') errors.email = "Field cannot be empty";
-        else errors.email = validEmailRegex.test(value) ? "" : "Invalid email address!";
+        );
+        if (value === "") errors.email = "Field cannot be empty";
+        else
+          errors.email = validEmailRegex.test(value)
+            ? ""
+            : "Invalid email address!";
         break;
       case "phone":
         let validPhoneRegex = RegExp(
           /^(\+0?1\s)?\(?\d{3}\)?[\s-]\d{3}[\s-]\d{4}$/
         );
-        if(value === '') errors.phone = "Field cannot be empty";
-        else errors.phone = validPhoneRegex.test(value) ? "" : "Invalid format! Please use (xxx) xxx-xxxx format";
+        if (value === "") errors.phone = "Field cannot be empty";
+        else
+          errors.phone = validPhoneRegex.test(value)
+            ? ""
+            : "Invalid format! Please use (xxx) xxx-xxxx format";
         break;
       case "question":
-        if(value === '') errors.question = "Field cannot be empty";
+        if (value === "") errors.question = "Field cannot be empty";
         else errors.question = "";
         break;
       default:
@@ -52,11 +61,19 @@ class Contact extends Component {
   };
 
   handleSubmit = (event) => {
-    if (this.validateForm(this.state.errors))
-      alert("Success. Thanks for reaching out we will get back to you as soon as possible!")
-    else {
+    let test = this.notEmpty();
+    console.log(test);
+    if (this.validateForm(this.state.errors) && this.notEmpty() === true) {
+      alert(
+        "Success. Thanks for reaching out. we will get back to you as soon as possible!"
+      );
+    } else {
       event.preventDefault();
-      alert('Unable to submit form. Please correct the errors in the form!');
+      if (this.notEmpty() === false) {
+        alert("Error: Make sure all fields are filled in!");
+      } else {
+        alert("Error: Please correct the errors in the form!");
+      }
     }
   };
 
@@ -66,9 +83,13 @@ class Contact extends Component {
     return valid;
   };
 
-  isDisabled() {
-    let disable = (this.state.fullName != null) && (this.state.email != null) && (this.state.phone != null) && (this.state.question != null)
-    return (disable)
+  notEmpty() {
+    let disable =
+      this.state.fullName != null &&
+      this.state.email != null &&
+      this.state.phone != null &&
+      this.state.question != null;
+    return disable;
   }
 
   render() {
@@ -137,9 +158,9 @@ class Contact extends Component {
                 onChange={this.handleChange}
                 noValidate
               />
-               {errors.phone.length > 0 && (
-                  <span className="error">{errors.phone}</span>
-                )}
+              {errors.phone.length > 0 && (
+                <span className="error">{errors.phone}</span>
+              )}
             </div>
             <div className="question-wrapper">
               <label className="form-label">
@@ -156,11 +177,11 @@ class Contact extends Component {
                 noValidate
               ></textarea>
               {errors.question.length > 0 && (
-                  <span className="error">{errors.question}</span>
-                )}
+                <span className="error">{errors.question}</span>
+              )}
             </div>
             <div className="button-wrapper">
-              <input type="submit" value="Submit" className="btn submit" disabled={!this.isDisabled()}/>
+              <input type="submit" value="Submit" className="btn submit" />
               <input type="reset" value="Clear" className="btn" />
             </div>
           </form>

@@ -54,6 +54,23 @@
   top: 5px;
 }
 
+.noexpert {
+  margin: 0;
+  padding-top: 0;
+}
+
+.calendar {
+  font-size: 1em;
+  padding: 6px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.DayPickerInput {
+  width: 100%;
+  margin-top: 1px;
+}
+
 @media screen and (max-width: 535px) {
   .payment-icon {
     font-size: 24px;
@@ -61,7 +78,8 @@
   }
 }
 
-@media screen and (min-width: 535px) {
+/* old width 535 px */
+@media screen and (min-width: 768px) {
   .booking-outer {
     display: flex;
     justify-content: space-between;
