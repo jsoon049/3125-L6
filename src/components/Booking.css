@@ -24,7 +24,7 @@
 
 .services-drop {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .last {
@@ -69,6 +69,10 @@
 .DayPickerInput {
   width: 100%;
   margin-top: 1px;
+}
+
+.payment-container {
+  border-top: 1px solid black;
 }
 
 @media screen and (max-width: 535px) {

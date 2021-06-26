@@ -3,7 +3,7 @@ import "./Booking.css";
 
 export const Payment = ( props ) => {
   return (
-    <div>
+    <div className="payment-container">
       <h2 className="payment-title">
         <span>Payment Details</span>
         <span className="material-icons payment-icon">credit_card</span>
@@ -48,6 +48,7 @@ export const Payment = ( props ) => {
               placeholder="xxxx xxxx xxxx xxxx"
               onChange={props.handleChange}
               noValidate
+              maxLength='19'
             />
             {props.state.errors.cardnumber.length > 0 && (
                 <span className="error">{props.state.errors.cardnumber}</span>
@@ -69,6 +70,7 @@ export const Payment = ( props ) => {
               placeholder="MM/YY"
               onChange={props.handleChange}
               noValidate
+              maxLength='5'
             />
              {props.state.errors.carddate.length > 0 && (
                 <span className="error">{props.state.errors.carddate}</span>
@@ -88,6 +90,7 @@ export const Payment = ( props ) => {
               placeholder="xxx"
               onChange={props.handleChange}
               noValidate
+              maxLength='3'
             />
             {props.state.errors.cardccv.length > 0 && (
                 <span className="error">{props.state.errors.cardccv}</span>

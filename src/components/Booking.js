@@ -111,7 +111,9 @@ class Booking extends React.Component {
         break;
       case "carddate":
         let validDateRegex = RegExp(/^[\d]{2}\/[\d]{2}/);
+        let month = value.substring(0,2);
         if (value === "") errors.carddate = "Field cannot be empty";
+        else if( !isNaN(month) && month > 12) errors.carddate = "Month cannot be greater than 12"
         else
           errors.carddate = validDateRegex.test(value)
             ? ""
