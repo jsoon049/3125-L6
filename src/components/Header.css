@@ -35,7 +35,7 @@
     opacity: 0.5;
 }
 
-@media screen and (min-width: 535px) {
+@media screen and (min-width: 300px) {
     .header {
         position: sticky;
         top: 0;
@@ -44,11 +44,6 @@
 }
 
 @media screen and (min-width: 635px) {
-    .header {
-        position: sticky;
-        top: 0;
-        z-index: 1;
-    }
     .links {
         font-size: 1.25em;
         margin-right: 15px;

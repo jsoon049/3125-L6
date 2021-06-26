@@ -102,8 +102,7 @@ class Booking extends React.Component {
             : "Name can only contain letters and spaces";
         break;
       case "cardnumber":
-        // let validCardNumRegex = RegExp(/^(4[0-9]{12}(?:[0-9]{3})?)$/); //not working
-        let validCardNumRegex = RegExp(/^[0-9]{3}$/);
+        let validCardNumRegex = RegExp(/^(?:\d{4} ){3}\d{4}$/);
         if (value === "") errors.cardnumber = "Field cannot be empty";
         else
           errors.cardnumber = validCardNumRegex.test(value)
@@ -222,9 +221,7 @@ class Booking extends React.Component {
             <span className="material-icons title-icon">book_online</span>
           </h1>
           <p className="instructions">
-            Please fill out this section and then the payment section below to
-            guarantee your appointment. Click the submit button once you are
-            ready to book your appointment.
+            To book an appointment, fill out both sections of the form below and click on the submit button.
           </p>
           <form
             className="booking-form-wrapper"
