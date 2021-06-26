@@ -7,22 +7,22 @@ export const Header = () => {
       <div className='navbar'>
         <ul className="navbar-ul">
           <li className="navbar-li">
-            <a href="/3125-L5/#service" className="links">
+            <a href="/3125-L6/#service" className="links">
               Services
             </a>
           </li>
           <li className="navbar-li">
-            <a href="/3125-L5/#booking" className="links">
+            <a href="/3125-L6/#booking" className="links">
               Book Appointment
             </a>
           </li>
           <li className="navbar-li">
-            <a href="/3125-L5/#about" className="links">
+            <a href="/3125-L6/#about" className="links">
               About Us
             </a>
           </li>
           <li className="navbar-li">
-            <a href="/3125-L5/#contact" className="links last-link">
+            <a href="/3125-L6/#contact" className="links last-link">
               Contact Us
             </a>
           </li>
